@@ -1,4 +1,4 @@
-package methods_of_WebElement;
+package Synchronisation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
