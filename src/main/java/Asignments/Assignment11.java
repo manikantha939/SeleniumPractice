@@ -26,6 +26,8 @@ public class Assignment11 {
         HashSet<String> uniqueOption = new HashSet<>();
         HashSet<String> duplicateOption = new HashSet<>();
 
+        //Approach 1
+
 //        for (WebElement ele:options) {
 //            String text = ele.getText();
 //            if (!uniqueOption.add(text)) {
