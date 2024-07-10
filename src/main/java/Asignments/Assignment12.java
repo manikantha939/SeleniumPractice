@@ -9,9 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 import java.time.Duration;
 import java.util.HashSet;
 import java.util.List;
-import java.util.TreeSet;
+import java.util.Scanner;
 
-public class Assignment11 {
+public class Assignment12 {
     public static void main(String[] args) {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
@@ -21,35 +21,24 @@ public class Assignment11 {
 
         WebElement mtr = driver.findElement(By.id("mtr"));
         Select s=new Select(mtr);
-
         List<WebElement> options = s.getOptions();
-        HashSet<String> uniqueOption = new HashSet<>();
-        HashSet<String> duplicateOption = new HashSet<>();
-
-        //Approach 1
-
-//        for (WebElement ele:options) {
-//            String text = ele.getText();
-//            if (!uniqueOption.add(text)) {
-//                duplicateOption.add(text);
-//            }
-//        }
-//
-//        System.out.print("duplicate options are: ");
-//
-//        for (String text: duplicateOption) {
-//            System.out.print(text);
-//        }
-
-		//approach  2
+        HashSet<String> option = new HashSet<>();
         for (WebElement ele:options) {
             String text = ele.getText();
-            if (uniqueOption.contains(text)){
-                System.out.println(text);
-            }else {
-                uniqueOption.add(text);
-            }
+            option.add(text);
         }
-        driver.quit();
+
+        for (String dishName:option) {
+            System.out.println(dishName);
+        }
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("-----------------------------------------");
+        System.out.println("Please mention the dish: ");
+        String dish = scanner.next();
+        if(option.equals(dish)){
+            System.out.println(dish+" Dish is present");
+        } else {
+            System.out.println(dish+" Dish is not present");
+        }
     }
 }
