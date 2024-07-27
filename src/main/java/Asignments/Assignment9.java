@@ -19,7 +19,6 @@ public class Assignment9 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("file:///D:/Projects/SeleniumPractice/testData/multiSelectDropdown.html");
-
         WebElement mtr = driver.findElement(By.id("mtr"));
         Select s=new Select(mtr);
 

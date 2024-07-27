@@ -1,4 +1,4 @@
-package methods_of_WebElement;
+package Handelling_MultipleElements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
