@@ -18,7 +18,7 @@ public class Assignment4 {
         searchTbx.sendKeys("iphone 14 pro max");
         Thread.sleep(2000);
         List<WebElement> elements = driver.findElements(By.xpath("//*[contains(text(),'iphone 15')]/.."));
-        for (WebElement ele:elements) {
+        for (WebElement ele : elements) {
             System.out.println(ele.getText());
         }
     }

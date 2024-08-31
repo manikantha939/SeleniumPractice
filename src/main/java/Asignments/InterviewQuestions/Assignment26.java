@@ -1,4 +1,4 @@
-package Asignments;
+package Asignments.InterviewQuestions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,7 @@ public class Assignment26 {
     public static WebDriverWait wait;
 
     public static void main(String[] args) {
-        ChromeOptions options=new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
         //approach 1
 //        WebDriver driver = new ChromeDriver();
@@ -71,8 +71,8 @@ public class Assignment26 {
     public static void switchToNewWindow() {
         Set<String> allWid = driver.getWindowHandles();
         for (String wid : allWid) {
-                driver.switchTo().window(wid);
-                System.out.println(driver.getCurrentUrl());
-            }
+            driver.switchTo().window(wid);
+            System.out.println(driver.getCurrentUrl());
         }
+    }
 }

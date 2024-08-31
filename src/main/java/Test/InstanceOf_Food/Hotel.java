@@ -8,8 +8,8 @@ public class Hotel {
         } else if (choice == 2) {
             Idly i = new Idly();
             return i;
-        }else {
-            Vada v=new Vada();
+        } else {
+            Vada v = new Vada();
             return v;
         }
     }

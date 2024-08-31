@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class HandlingSingleFrame {
     public static void main(String[] args) {
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -18,8 +18,8 @@ public class HandlingSingleFrame {
         driver.switchTo().frame(0);
         WebElement draggable = driver.findElement(By.id("draggable"));
         WebElement droppable = driver.findElement(By.id("droppable"));
-        Actions a=new Actions(driver);
-        a.dragAndDrop(draggable,droppable).perform();
+        Actions a = new Actions(driver);
+        a.dragAndDrop(draggable, droppable).perform();
         driver.quit();
     }
 }

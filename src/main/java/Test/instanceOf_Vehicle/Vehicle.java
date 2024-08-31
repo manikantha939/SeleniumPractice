@@ -1,5 +1,5 @@
 package Test.instanceOf_Vehicle;
 
 public class Vehicle {
-    String engine="Run";
+    String engine = "Run";
 }

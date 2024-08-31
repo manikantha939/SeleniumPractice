@@ -1,4 +1,4 @@
-package Udemy.Section30;
+package Udemy.Section30.Udm30;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -12,15 +12,15 @@ import java.util.ListIterator;
 
 public class MouseHover_ratings {
     public static void main(String[] args) {
-        WebDriver driver =new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("https://demoapps.qspiders.com/ui/mouseHover/rating?sublist=2");
         List<WebElement> ratings = driver.findElements(By.xpath("//h1[text()='Rate this product']/..//label"));
-        Actions actions=new Actions(driver);
-        ListIterator<WebElement>li=ratings.listIterator();
-        while (li.hasNext()){
+        Actions actions = new Actions(driver);
+        ListIterator<WebElement> li = ratings.listIterator();
+        while (li.hasNext()) {
             WebElement next = li.next();
             actions.moveToElement(next).click().perform();
         }

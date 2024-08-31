@@ -1,9 +1,7 @@
-package Udemy.Section30;
-
-import java.util.ArrayList;
+package Udemy.Section30.Udm30;
 
 public class WrapperClass {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 //        //auto boxing
 //        int a=10;
 //        Integer i=a;
@@ -33,16 +31,16 @@ public class WrapperClass {
 //            System.out.println(a.get(i));
 //        }
 
-        test t1=new test("abc", 10);
-        test t2=new test("def", 20);
-        ArrayList<test> de=new ArrayList<>();
-        de.add(t1);
-        de.add(t2);
-        de.add(new test("test",123));
+//        test t1=new test("abc", 10);
+//        test t2=new test("def", 20);
+//        ArrayList<test> de=new ArrayList<>();
+//        de.add(t1);
+//        de.add(t2);
+//        de.add(new test("test",123));
 
-        for (test l: de) {
-//            System.out.println(l.name+" "+l.id);
-            System.out.println(l);
-        }
-	}
+//        for (test l: de) {
+////            System.out.println(l.name+" "+l.id);
+//            System.out.println(l);
+//        }
+    }
 }

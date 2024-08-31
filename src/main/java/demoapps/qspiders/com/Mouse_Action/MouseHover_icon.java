@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class MouseHover_icon {
     public static void main(String[] args) {
-        WebDriver driver =new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -18,7 +18,7 @@ public class MouseHover_icon {
         WebElement input = driver.findElement(By.xpath("//input[@placeholder='Enter Password']"));
         input.sendKeys("abc");
         WebElement infoEle = driver.findElement(By.xpath("//img[contains(@src,'message-hint')]"));
-        Actions actions=new Actions(driver);
+        Actions actions = new Actions(driver);
 
         WebElement hide = driver.findElement(By.xpath("//img[contains(@src, '/assets/hide')]"));
         actions.click(hide).perform();

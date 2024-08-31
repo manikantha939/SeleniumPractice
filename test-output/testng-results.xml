@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[openBrowser]]>
+    </line>
+    <line>
+      <![CDATA[createCustomer]]>
+    </line>
+    <line>
+      <![CDATA[logout]]>
+    </line>
+    <line>
+      <![CDATA[modifyCustomer]]>
+    </line>
+    <line>
+      <![CDATA[logout]]>
+    </line>
+    <line>
+      <![CDATA[logout]]>
+    </line>
+    <line>
+      <![CDATA[closeBrowser]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-08-24T08:03:06 IST" name="All Test Suite" finished-at="2024-08-24T08:03:09 IST" duration-ms="3574">
+    <groups>
+    </groups>
+    <test started-at="2024-08-24T08:03:06 IST" name="D:/Projects/SeleniumPractice/src/main/java/com/actitime/testScript" finished-at="2024-08-24T08:03:09 IST" duration-ms="3574">
+      <class name="com.actitime.testScript.CustomerModule">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:06 IST" name="openBrowser" finished-at="2024-08-24T08:03:06 IST" duration-ms="277" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[openBrowser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:06 IST" name="login" finished-at="2024-08-24T08:03:06 IST" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createCustomer()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:06 IST" name="createCustomer" finished-at="2024-08-24T08:03:06 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[createCustomer]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createCustomer -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:06 IST" name="logout" finished-at="2024-08-24T08:03:07 IST" duration-ms="962" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:07 IST" name="login" finished-at="2024-08-24T08:03:07 IST" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="modifyCustomer()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:07 IST" name="modifyCustomer" finished-at="2024-08-24T08:03:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[modifyCustomer]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- modifyCustomer -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:07 IST" name="logout" finished-at="2024-08-24T08:03:08 IST" duration-ms="838" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:08 IST" name="login" finished-at="2024-08-24T08:03:08 IST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="deleteCustomer()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:08 IST" name="deleteCustomer" finished-at="2024-08-24T08:03:08 IST" duration-ms="3" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.fail(Assert.java:116)
+at com.actitime.testScript.CustomerModule.deleteCustomer(CustomerModule.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCustomer -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:09 IST" name="logout" finished-at="2024-08-24T08:03:09 IST" duration-ms="596" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.actitime.testScript.CustomerModule@3a5ecce3]" started-at="2024-08-24T08:03:09 IST" name="closeBrowser" finished-at="2024-08-24T08:03:09 IST" duration-ms="186" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[closeBrowser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.actitime.testScript.CustomerModule -->
+    </test> <!-- D:/Projects/SeleniumPractice/src/main/java/com/actitime/testScript -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

@@ -1,7 +1,6 @@
 package demoapps.qspiders.com.Scroll;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 import java.util.Set;
 
 public class WriteAScriptToVerticallyScrollThePage {
@@ -29,10 +27,10 @@ public class WriteAScriptToVerticallyScrollThePage {
 //        driver.findElement(By.linkText("Infinite")).click();
         driver.findElement(By.linkText("Open In New Tab")).click();
         Set<String> allWid = driver.getWindowHandles();
-        for (String wid: allWid) {
+        for (String wid : allWid) {
             driver.switchTo().window(wid);
         }
-        Actions a=new Actions(driver);
+        Actions a = new Actions(driver);
         String title = driver.getTitle();
         wait.until(ExpectedConditions.titleIs(title));
         //Vertical scroll

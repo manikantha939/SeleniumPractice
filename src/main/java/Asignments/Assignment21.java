@@ -1,12 +1,9 @@
 package Asignments;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.ListDocument;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -16,7 +13,7 @@ import java.util.Set;
 
 public class Assignment21 {
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -29,22 +26,22 @@ public class Assignment21 {
         Thread.sleep(2000);
         driver.findElement(By.linkText("Read Service Agreement")).click();
         Set<String> allwid = driver.getWindowHandles();
-        for (String wid: allwid) {
+        for (String wid : allwid) {
             driver.switchTo().window(wid);
         }
         System.out.println(driver.getCurrentUrl());
         List<WebElement> elements = driver.findElements(By.tagName("h2"));
-        ListIterator<WebElement> list=elements.listIterator(1);
-        ArrayList<String> elist=new ArrayList<>();
-        while (list.hasNext()){
+        ListIterator<WebElement> list = elements.listIterator(1);
+        ArrayList<String> elist = new ArrayList<>();
+        while (list.hasNext()) {
             WebElement next = list.next();
             System.out.println(next.getText());
             elist.add(next.getText());
         }
 
         System.out.println("---------------------------------------------");
-        ListIterator<String> elee=elist.listIterator(elist.size());
-        while (elee.hasPrevious()){
+        ListIterator<String> elee = elist.listIterator(elist.size());
+        while (elee.hasPrevious()) {
             String previous = elee.previous();
             System.out.println(previous);
         }

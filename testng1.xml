@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Group Execution" parallel="tests" thread-count="3" >
+    <test verbose="2" preserve-order="true" name="GroupTest">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <exclude name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Handelling_TestNG.GroupTest"></class>
+        </classes>
+    </test>
+</suite>

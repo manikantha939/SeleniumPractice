@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class DragAndDrop_DragMultiple {
     public static void main(String[] args) throws AWTException {
-        WebDriver driver =new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -25,13 +25,13 @@ public class DragAndDrop_DragMultiple {
         WebElement mobileAccessories = driver.findElement(By.id("dropZone1"));
         WebElement laptopAccessories = driver.findElement(By.id("dropZone2"));
 
-        Robot r=new Robot();
+        Robot r = new Robot();
         r.keyPress(KeyEvent.VK_CONTROL);
-        Actions actions=new Actions(driver);
+        Actions actions = new Actions(driver);
         actions.moveToElement(laptopCharger).click().moveToElement(laptopCover).click()
-                .clickAndHold().pause(2000).dragAndDrop(laptopCover,laptopAccessories).release(laptopAccessories).build().perform();
+                .clickAndHold().pause(2000).dragAndDrop(laptopCover, laptopAccessories).release(laptopAccessories).build().perform();
         actions.moveToElement(mobileCover).click().moveToElement(mobileCharger).click()
-                .clickAndHold().pause(2000).dragAndDrop(mobileCharger,mobileAccessories).release().build().perform();
+                .clickAndHold().pause(2000).dragAndDrop(mobileCharger, mobileAccessories).release().build().perform();
         r.keyRelease(KeyEvent.VK_CONTROL);
     }
 }

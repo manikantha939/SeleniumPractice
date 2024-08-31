@@ -10,13 +10,13 @@ import java.time.Duration;
 
 public class MouseHover_image {
     public static void main(String[] args) {
-        WebDriver driver =new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("https://demoapps.qspiders.com/ui/mouseHover/mouseHoverimage?sublist=1");
         WebElement image = driver.findElement(By.xpath("//img[@alt='order placed']"));
-        Actions actions=new Actions(driver);
+        Actions actions = new Actions(driver);
         actions.moveToElement(image).perform();
 
         String tooltip = image.getAttribute("title");

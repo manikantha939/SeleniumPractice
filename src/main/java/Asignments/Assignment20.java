@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class Assignment20 {
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -55,35 +55,33 @@ public class Assignment20 {
 //        }
 
 
-
-
         //optimized
-        By mobileCharger=By.xpath("//div[text()='Mobile Charger']");
-        By laptopCharger=By.xpath("//div[text()='Laptop Charger']");
-        By mobileCover=By.xpath("//div[text()='Mobile Cover']");
-        By laptopCover=By.xpath("//div[text()='Laptop Cover']");
+        By mobileCharger = By.xpath("//div[text()='Mobile Charger']");
+        By laptopCharger = By.xpath("//div[text()='Laptop Charger']");
+        By mobileCover = By.xpath("//div[text()='Mobile Cover']");
+        By laptopCover = By.xpath("//div[text()='Laptop Cover']");
         By mobileAccessories = By.xpath("//div[text()='Mobile Accessories']");
         By laptopAccessories = By.xpath("//div[text()='Laptop Accessories']");
 
-        Actions a=new Actions(driver);
-        a.dragAndDrop(driver.findElement(mobileCharger),driver.findElement(mobileAccessories)).perform();
-        a.dragAndDrop(driver.findElement(laptopCharger),driver.findElement(laptopAccessories)).perform();
-        a.dragAndDrop(driver.findElement(mobileCover),driver.findElement(mobileAccessories)).perform();
-        a.dragAndDrop(driver.findElement(laptopCover),driver.findElement(laptopAccessories)).perform();
+        Actions a = new Actions(driver);
+        a.dragAndDrop(driver.findElement(mobileCharger), driver.findElement(mobileAccessories)).perform();
+        a.dragAndDrop(driver.findElement(laptopCharger), driver.findElement(laptopAccessories)).perform();
+        a.dragAndDrop(driver.findElement(mobileCover), driver.findElement(mobileAccessories)).perform();
+        a.dragAndDrop(driver.findElement(laptopCover), driver.findElement(laptopAccessories)).perform();
         String color = null;
-        ArrayList<WebElement> allElements=new ArrayList<>();
-        try{
+        ArrayList<WebElement> allElements = new ArrayList<>();
+        try {
             allElements.add(driver.findElement(mobileCharger));
             allElements.add(driver.findElement(laptopCharger));
             allElements.add(driver.findElement(mobileCover));
             allElements.add(driver.findElement(laptopCover));
-        }catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             System.out.println(e.getMessage());
         }
-        for (WebElement ele: allElements) {
+        for (WebElement ele : allElements) {
             color = ele.getAttribute("style");
-            if(!color.contains("lightgreen"))
-                System.out.println(ele.getText()+" drag and dropped to wrong container");
+            if (!color.contains("lightgreen"))
+                System.out.println(ele.getText() + " drag and dropped to wrong container");
         }
         driver.quit();
     }

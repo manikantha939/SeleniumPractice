@@ -26,12 +26,12 @@ public class Assignment19 {
 //            }
 //        }
 
-        Iterator<String> i=allWid.iterator();
-        while (i.hasNext()){
+        Iterator<String> i = allWid.iterator();
+        while (i.hasNext()) {
             String wid = i.next();
             driver.switchTo().window(wid);
             String currentUrl = driver.getCurrentUrl();
-            if(currentUrl.equals("https://demoapps.qspiders.com/ui/browser/SignUpPage")){
+            if (currentUrl.equals("https://demoapps.qspiders.com/ui/browser/SignUpPage")) {
                 driver.findElement(By.id("confirm-password")).sendKeys("123");
                 break;
             }

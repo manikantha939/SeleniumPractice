@@ -10,13 +10,13 @@ import java.time.Duration;
 
 public class ClickAndHold {
     public static void main(String[] args) {
-        WebDriver driver =new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         driver.get("https://demoapps.qspiders.com/ui/clickHold?sublist=0");
         WebElement circle = driver.findElement(By.id("circle"));
-        Actions actions=new Actions(driver);
+        Actions actions = new Actions(driver);
         actions.clickAndHold(circle).perform();
     }
 

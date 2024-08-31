@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.actitime.generic.ListnerImplementation"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="D:/Projects/SeleniumPractice/src/main/java/com/actitime/testScript">
+        <classes>
+            <class name="com.actitime.testScript.CustomerModule">
+                <methods>
+                    <include name="createCustomer"/>
+                    <include name="modifyCustomer"/>
+                    <include name="deleteCustomer"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -16,7 +16,7 @@ public class DurationThread {
 //        Thread.sleep(2000);
         try {
             Thread.sleep(500);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         driver.findElement(By.id("logoutLink")).click();
