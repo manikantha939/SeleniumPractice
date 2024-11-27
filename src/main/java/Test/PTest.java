@@ -5,5 +5,6 @@ public class PTest {
         Person p = new Person();
         p.setId(10);
         System.out.println(p.getId());
+
     }
 }
