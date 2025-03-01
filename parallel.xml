@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="classes" thread-count="2">
+    <test verbose="2" preserve-order="true"
+          name="D:/Projects/SeleniumPractice/src/main/java/Handelling_TestNG/ParallelTest.java">
+        <classes>
+            <class name="Handelling_TestNG.ParallelTest">
+                <methods>
+                    <include name="launchGoogleTest"><parameter name="BROWSER" value="chrome"></parameter></include>
+                    <include name="launchMyntraTest"><parameter name="BROWSER" value="edge"></parameter></include>
+                    <include name="launchAmazonTest"><parameter name="BROWSER" value="firefox"></parameter></include>
+                    <include name="launchFlipkartTest"><parameter name="BROWSER" value="chrome"></parameter></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -5,12 +5,12 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class GroupTest {
-    @Test(groups = {"smoke"})
+    @Test(groups = {"smoke"},priority = 4,invocationCount = 4)
     public void testMethod1(){
         Reporter.log("testMethod 1 in smoke group", true);
     }
 
-    @Test(groups = {"smoke","regression"})
+    @Test(groups = {"smoke","regression"}, priority = 1,invocationCount = 1)
     public void testMethod2(){
         Reporter.log("testMethod 2 in smoke and regression group", true);
     }

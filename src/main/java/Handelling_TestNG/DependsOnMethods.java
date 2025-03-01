@@ -12,7 +12,7 @@ public class DependsOnMethods {
         Reporter.log("createCustomer", true);
     }
 
-    @Test(priority =0, dependsOnMethods = {"createCustomer","modifyCustomer"})
+    @Test(priority =-1, dependsOnMethods = {"createCustomer","modifyCustomer"})
     public void deleteCustomer(){
         Reporter.log("deleteCustomer", true);
     }
