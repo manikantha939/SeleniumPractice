@@ -14,7 +14,9 @@ public class CountNumberOfOccuranceOfNumberInArray {
         System.out.println(map);
 
         for (int key:map.keySet()) {
-            System.out.println(key + " -> " + map.get(key));
+            if(map.get(key)>=2) {
+                System.out.println(key + " -> " + map.get(key));
+            }
         }
 
     }
